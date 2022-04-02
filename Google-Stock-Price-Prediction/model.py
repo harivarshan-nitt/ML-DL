@@ -40,7 +40,8 @@ def train():
     model.add(Dense(units = 1))
     model.compile(optimizer = 'adam',loss = 'mean_squared_error')
     model.fit(X,Y,epochs = epochs, batch_size = batch_size)
-
+    model.summary()
+    
     return model
 
 def predict(model):
